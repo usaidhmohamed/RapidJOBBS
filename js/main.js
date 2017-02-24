@@ -31,8 +31,10 @@ app.config(['$routeProvider', function ($routeProvider) {
 /**
  * Controls all other Pages
  */
-app.controller('PageCtrl', function (/*$scope, $location, $locationProvider*/) {
+app.controller('PageCtrl', function () {
   console.log("Page Controller reporting for duty.");
+  
+  var vm=this;
 
   //Start slider
   $("#carousel").carousel();
@@ -53,5 +55,9 @@ app.controller('PageCtrl', function (/*$scope, $location, $locationProvider*/) {
   $(document).ready(function () {
     $(this).scrollTop(0);
   });
+  
+  vm.login = function() {
+    console.log("Poda panni.");
+  }
 });
 
